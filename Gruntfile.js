@@ -16,10 +16,21 @@ module.exports = function(grunt) {
         src: ["<%=srcFiles%>"],
         dest: "dist/Main.js"
       }
+    },
+      
+    watch: {
+        files: ["src/**/*.purs", "bower_components/**/src/**/*.purs"],
+        tasks: ["psc:all", "execute"]
+    },
+
+    execute: {
+        src: ["dist/Main.js"]
     }
   });
 
   grunt.loadNpmTasks("grunt-purescript");
-  
+  grunt.loadNpmTasks("grunt-contrib-watch");
+  grunt.loadNpmTasks("grunt-execute");
+
   grunt.registerTask("default", ["psc:all", "dotPsci"]);
 };

@@ -2,11 +2,13 @@
   "name": "purescript-base",
   "version": "0.0.0",
   "description": "",
-  "scripts" : {
+  "scripts": {
     "test": "echo '' > /tmp/build.out && watch --color -n 0.5 'cat /tmp/build.out'"
-  }, 
+  },
   "devDependencies": {
     "grunt": "^0.4.5",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-execute": "^0.2.2",
     "grunt-purescript": "^0.6.0"
   },
   "license": "MIT"
